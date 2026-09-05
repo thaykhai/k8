@@ -3,18 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BÀI 12 - HÌNH BÌNH HÀNH</title>
+  <title>Làm bài kiểm tra - Thầy Khải</title>
   <style>
+    /* Cho ứng dụng chiếm toàn màn hình */
     body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
     iframe { border: none; width: 100%; height: 100%; display: block; }
+    
+    /* Thiết kế nút Nổi góc dưới bên trái */
+    .home-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #2563eb; 
+      color: white;
+      padding: 10px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 9999; /* Đảm bảo nút không bị ứng dụng đè lên */
+      transition: background-color 0.2s, transform 0.2s;
+    }
+    .home-btn:hover { 
+      background-color: #1d4ed8; 
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
+  
+  <!-- Nút nổi điều hướng thẳng về Trang chủ hệ thống -->
+  <a href="https://thaykhai.github.io/" class="home-btn">
+    🏠 Về Trang Chủ
+  </a>
+
+  <!-- Script nhúng mã Google Apps Script -->
   <script>
-    // Link Google Apps Script đã được mã hóa an toàn
-    const _0xlnk = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3c20zZk1ZUFVlY3NCZURlc0h2bVpUSURUdWhjLWpDbnZXV3E1Z0hMMWpFaDJzNDhBdDdGNUJ1Vl8wbDRFM2hid0IvZXhlYw==";
+    // Link Google Apps Script đã được mã hóa an toàn (Thầy nhớ dán chuỗi Base64 của bài Hình bình hành vào đây)
+    const _0xlnk = "R0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3c20zZk1ZUFVlY3NCZURlc0h2bVpUSURUdWhjLWpDbnZXV3E1Z0hMMWpFaDJzNDhBdDdGNUJ1Vl8wbDRFM2hid0IvZXhlYw==";
     
-    // Tạo thẻ iframe tự động kèm đầy đủ quyền hỗ trợ thiết bị di động
+    // Tạo khung iframe 
     const frame = document.createElement("iframe");
     frame.src = atob(_0xlnk);
     frame.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
@@ -22,5 +52,6 @@
     
     document.body.appendChild(frame);
   </script>
+
 </body>
 </html>
